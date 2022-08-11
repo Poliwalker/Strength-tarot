@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Dancing+Script&family=DynaPuff&family=Gloria+Hallelujah&family=Josefin+Sans:wght@500&family=Lobster+Two:ital,wght@1,700&family=Playfair+Display:ital,wght@1,500&family=Poppins:ital,wght@1,200&family=Raleway:wght@700&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+}
+
+body {
+	width: 100%;
+}
+
+.section {
+	width: 100%;
+}
+
+/* header */
+
+.header {
+	width: 100%;
+	height: 100px;
+	background-color: #ffc1d8;
+	padding: 0 15px;
+}
+
+.section0 {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 0 auto;
+}
+
+.logo img {
+	width: 140px;
+	height: 100px;
+}
+
+.link-items {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	gap: 30px;
+}
+
+.link-items a {
+	color: #000000;
+	font-size: 20px;
+	font-family: 'playfair display';
+}
+
+.link-items a:hover {
+	text-decoration: underline;
+}
+
+#toggle-menu {
+	display: none;
+}
+
+.link i {
+	display: none;
+	color: #f4f5f0;
+	font-size: 40px;
+}
+
+input[type='button'] {
+	background-color: #fc89d8;
+	padding: 8px 15px;
+	font-size: 18px;
+	color: black;
+	border-radius: 15px;
+	cursor: pointer;
+	font-family: 'DynaPuff';
+}
+
+@media (max-width: 1103px) {
+	.section0 {
+		justify-content: space-between;
+		padding: 0 30px;
+	}
+
+	.link i {
+		display: block;
+	}
+
+	.link-items {
+		position: absolute;
+		flex-direction: column;
+		justify-content: space-around;
+		top: 100px;
+		right: 0;
+		height: calc(100vh - 100px);
+		z-index: 1000;
+		display: none;
+		width: 100%;
+		background-color: #ffc1d8;
+	}
+
+	.link-items a {
+	}
+
+	#toggle-menu:checked + .link-items {
+		display: flex;
+	}
+}
+
+/* seccion 1 */
+
+.section1 {
+	max-width: 1300px;
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	gap: 50px;
+	justify-content: space-between;
+	align-items: center;
+	padding: 150px 20px;
+}
+
+.presentation-photo img {
+	width: 90%;
+	border-radius: 10px;
+}
+
+.presentation-text {
+	max-width: 400px;
+}
+
+.presentation-text h1 {
+	font-size: 50px;
+	color: #fc89d8;
+	margin-bottom: 30px;
+	font-family: 'DynaPuff';
+}
+
+.presentation-text p {
+	font-size: 22px;
+	font-family: 'playfair display';
+}
