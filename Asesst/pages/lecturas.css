@@ -1,100 +1,144 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&family=Oleo+Script:wght@700&family=Patrick+Hand&family=Source+Code+Pro:ital,wght@1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Dancing+Script&family=DynaPuff&family=Gloria+Hallelujah&family=Josefin+Sans:wght@500&family=Lobster+Two:ital,wght@1,700&family=Playfair+Display:ital,wght@1,500&family=Poppins:ital,wght@1,200&family=Raleway:wght@700&display=swap');
 
 * {
-padding:0;
-margin:0;
-box-sizing: border-box;
-background-color: rgb(237, 103, 237);
-background-image: url(../img/fondoprincipal.jpg);
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
 }
 
-.enlaces-lecturas{
-    padding: 50px;
-    margin-bottom: 40px;
-    text-align: center;
-    font-size: 30px;
-    background-image: url(../img/banner.jpg);
-    background-position: center;
-    background-size: auto;
+body {
+	width: 100%;
+	height: 100%;
 }
 
-a {
-    
-    padding:0 50px 0 50px;
-    background-color: rgb(157, 84, 252);
-    color: black;
+/* header */
+
+.header {
+	width: 100%;
+	height: 100px;
+	background-color: #ffc1d8;
+	padding: 0 15px;
+	position: sticky;
 }
 
-h2 {
-text-align: center;
-font-size: 70px;
-padding-bottom: 100px;
-font-family: 'abril fatface';
-background-image: url(../img/fondoprincipal.jpg);
-background-size: contain;
-color: rgb(157, 84, 252);
--webkit-text-stroke:0.5px #000;
+.section0 {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 0 auto;
 }
 
-h3 {
-text-align: center;
-font-size: 35px;
-color: rgb(157, 84, 252);
--webkit-text-stroke:0.5px #000;
+.logo img {
+	width: 140px;
+	height: 100px;
 }
 
-p {
-    font-size: 50px;
-    color: rgb(148, 31, 195);
-    -webkit-text-stroke:1px #000;
+.link-items {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	gap: 30px;
 }
 
-div {
-    margin: 500px;
+.link-items a {
+	color: #000000;
+	font-size: 20px;
+	font-family: 'playfair display';
 }
 
-
-.div-arcanosmayores {
-    display:inline-block;
-    width: 600px;
-    height: 500px;
-    padding: 20px;
-    margin: 20px;
-    overflow: auto;
+.link-items a:hover {
+	text-decoration: underline;
 }
 
-.div-arcanosmenores {
-    display:inline-block;
-    width: 600px;
-    height: 500px;
-    padding: 20px;
-    margin: 20px;
-    overflow: auto;
-    margin-left: 230px;
-    
+#toggle-menu {
+	display: none;
 }
 
-.div-tarotegipcio{
-    display:inline-block;
-    width: 600px;
-    height: 500px;
-    padding: 20px;
-    margin: 20px;
-    overflow: auto;
+.link i {
+	display: none;
+	color: #f4f5f0;
+	font-size: 40px;
 }
 
-.div-tarot-terapeutico {
-    display:inline-block;
-    width: 600px;
-    height: 500px;
-    padding: 20px;
-    margin: 20px;
-    overflow: auto;
-    margin-left: 230px;
-    
+input[type='button'] {
+	background-color: #fc89d8;
+	padding: 8px 15px;
+	font-size: 18px;
+	color: black;
+	border-radius: 15px;
+	cursor: pointer;
+	font-family: 'DynaPuff';
 }
 
-footer {
-    font-size: 40px;
-    text-align: right;
+@media (max-width: 1103px) {
+	.section0 {
+		justify-content: space-between;
+		padding: 0 30px;
+	}
+
+	.link i {
+		display: block;
+		cursor: pointer;
+	}
+
+	.link-items {
+		position: absolute;
+		flex-direction: column;
+		justify-content: space-around;
+		top: 100px;
+		right: 0;
+		height: calc(100vh - 100px);
+		z-index: 1000;
+		display: none;
+		width: 100%;
+		background-color: #ffc1d8;
+		transition: all 0.5s linear;
+	}
+
+	#toggle-menu:checked + .link-items {
+		display: flex;
+	}
+}
+
+.section1 {
+	width: 100%;
+	height: 100%;
+}
+
+.section-cards {
+	width: 100%;
+	max-width: 1300px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 100px;
+	padding: 100px 20px;
+}
+
+.section-cards h2 {
+	font-size: 50px;
+	font-family: 'Playfair Display';
+}
+
+.card {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: baseline;
+	gap: 50px;
+}
+
+.cards {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.cards p {
+	max-width: 400px;
 }
